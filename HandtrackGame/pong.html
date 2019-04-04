@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>小游戏</title>
+    <!--
+    <link rel="stylesheet" href="css/carbon-components.css" />
+    <script src="../../../下载/planck-with-testbed.js"></script>
+    -->
+    <link rel="stylesheet" href="css/pong.css">
+
+</head>
+
+<body class="bx--body p20">
+    <script>
+        window.alert('游戏规则:接住白球得10分，接住绿球得20分，接住红球扣20分');
+    </script>
+
+    <div class="infordisplay ">
+        <div class="toprow">
+            <img src="images/yigong.jpg" width="100" height="100" class="icon  floatleft " />
+            <div class="scorebox  iblock ">
+                <div class="scorevalue inscore"> 0 </div>
+                <div class="scorelabel inscore"> 分 </div>
+                <div class="scoreadded inscore"> </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="settingsswitches">
+            <div class=" ">
+                <div class="iblock floatleft">
+                    <label class="switch">
+                        <input type="checkbox" id="sound">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="  iblock soundofftext"> 音效</div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+        <div class="pausetext">
+            <!-- <div>Sound (s) </div> -->
+            <div>暂停 (空格键) </div>
+        </div>
+
+        <div id="updatenote" class="updatenote mt10"> 正在加载模型</div>
+        <button  id="trackbutton" class="bx--btn bx--btn--secondary mt10 trackbutton" type="button" disabled>
+                开启视觉控制
+              </button>
+
+
+    </div>
+    <video class="videobox canvasbox" autoplay="autoplay" id="myvideo"></video>
+  <canvas id="canvas" class="border canvasbox"></canvas>
+
+    <div class="pauseoverlay">
+        <div class="overlaycenter">
+            程序导入中...
+        </div>
+    </div>
+
+    <script src="js/planck-with-testbed.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="handtrack.min.js"> </script>
+    <script src="js/pong.js"></script>
+</body>
+
+</html>
